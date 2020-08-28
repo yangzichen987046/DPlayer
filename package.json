@@ -1,6 +1,6 @@
 {
     "name": "yangzichen_dplayer",
-    "version": "1.26.1",
+    "version": "1.26.2",
     "description": "Wow, such a lovely HTML5 danmaku video player",
     "main": "dist/DPlayer.min.js",
     "scripts": {
