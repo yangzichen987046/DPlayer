@@ -98,6 +98,11 @@ class Template {
         this.infoDanmakuId = this.container.querySelector('.dplayer-info-panel-item-danmaku-id .dplayer-info-panel-item-data');
         this.infoDanmakuApi = this.container.querySelector('.dplayer-info-panel-item-danmaku-api .dplayer-info-panel-item-data');
         this.infoDanmakuAmount = this.container.querySelector('.dplayer-info-panel-item-danmaku-amount .dplayer-info-panel-item-data');
+
+        this.stepBackward = this.container.querySelector('.dplayer-stepBackward-icon');
+        this.stepForward = this.container.querySelector('.dplayer-stepForward-icon');
+        this.playListCurrent = this.container.querySelector('.playListCurrent');
+        this.playListTotal = this.container.querySelector('.playListTotal');
     }
 }
 

@@ -114,7 +114,15 @@ function initPlayers() {
                 text: 'custom contextmenu',
                 link: 'https://github.com/MoePlayer/DPlayer'
             }
-        ]
+        ],
+        playList:{
+            use:true,
+            current:1,
+            total:10,
+            getVideo:function(current) {
+                console.log('getVideo'+current)
+            }
+        }
     });
 
     const events = [

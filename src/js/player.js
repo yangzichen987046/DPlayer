@@ -21,6 +21,7 @@ import ContextMenu from './contextmenu';
 import InfoPanel from './info-panel';
 import tplVideo from '../template/video.art';
 
+import PlayList from './playList';
 let index = 0;
 const instances = [];
 
@@ -76,6 +77,8 @@ class DPlayer {
         this.fullScreen = new FullScreen(this);
 
         this.controller = new Controller(this);
+
+        this.playList = new PlayList(this);
 
         if (this.options.danmaku) {
             this.danmaku = new Danmaku({

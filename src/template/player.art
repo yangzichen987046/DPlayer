@@ -98,6 +98,17 @@
         {{ /if }}
     </div>
     <div class="dplayer-icons dplayer-icons-right">
+         {{ if options.playList.use }}
+         <div class="dplayer-icon dplayer-stepBackward-icon" data-balloon-pos="up">
+             <span class="dplayer-icon-content">{{@ icons.stepBackward }}</span>
+         </div>
+         <div class="playList">
+             <span class="playListCurrent">{{options.playList.current}}</span>/<span class="playListTotal">{{options.playList.total}}</span>
+         </div>
+         <div class="dplayer-icon dplayer-stepForward-icon" data-balloon-pos="up">
+             <span class="dplayer-icon-content">{{@ icons.stepForward }}</span>
+         </div>
+        {{ /if }}
         {{ if options.video.quality }}
         <div class="dplayer-quality">
             <button class="dplayer-icon dplayer-quality-icon">{{ options.video.quality[options.video.defaultQuality].name }}</button>

@@ -650,6 +650,22 @@
             }
         }
     }
+    .playList{
+        color:#fff;
+        width: auto;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        vertical-align: middle;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 8px;
+        span{
+            line-height: 22px;
+        }
+    }
 }
 
 .dplayer-mobile-play {

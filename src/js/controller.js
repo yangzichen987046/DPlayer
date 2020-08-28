@@ -34,6 +34,9 @@ class Controller {
         if (!utils.isMobile) {
             this.initVolumeButton();
         }
+
+        this.initStepBackwardButton();
+        this.initStepForwardButton();
     }
 
     initPlayButton() {
@@ -297,6 +300,27 @@ class Controller {
             });
         }
     }
+
+    initStepBackwardButton(){
+        let {use,current} = this.player.options.playList
+        if (use) {
+            if(current===1)this.player.template.stepBackward.style.opacity= '0.4'
+            this.player.template.stepBackward.addEventListener('click', () => {
+                this.player.playList.stepBackward()
+            })
+        }
+    }
+
+    initStepForwardButton(){
+        let {use,current,total} = this.player.options.playList
+        if (use) {
+            if(current===total || total===0)this.player.template.stepForward.style.opacity= '0.4'
+            this.player.template.stepForward.addEventListener('click', () => {
+                this.player.playList.stepForward()
+            })
+        }
+    }
+
 
     setAutoHide() {
         this.show();

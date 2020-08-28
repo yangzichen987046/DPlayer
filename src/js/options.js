@@ -21,6 +21,12 @@ export default (options) => {
         contextmenu: [],
         mutex: true,
         pluginOptions: { hls: {}, flv: {}, dash: {}, webtorrent: {} },
+        playList:{
+            use:false,
+            current:1,
+            total:0,
+            getVideo:()=>{}
+        }
     };
     for (const defaultKey in defaultOption) {
         if (defaultOption.hasOwnProperty(defaultKey) && !options.hasOwnProperty(defaultKey)) {
@@ -56,6 +62,9 @@ export default (options) => {
             },
         }
     ]);
-
+    if (options.playList) {
+        isNaN(parseInt(options.playList.current)) && (options.playList.current = 1);
+        isNaN(parseInt(options.playList.total)) && (options.playList.total = 0);
+    }
     return options;
 };
