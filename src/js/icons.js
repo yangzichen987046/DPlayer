@@ -16,8 +16,8 @@ import airplay from '../assets/airplay.svg';
 import subtitle from '../assets/subtitle.svg';
 import loading from '../assets/loading.svg';
 
-import stepBackward from '../assets/step-backward.svg'
-import stepForward from '../assets/step-forward.svg'
+import stepBackward from '../assets/step-backward.svg';
+import stepForward from '../assets/step-forward.svg';
 const Icons = {
     play: play,
     pause: pause,
@@ -37,8 +37,8 @@ const Icons = {
     loading: loading,
     airplay: airplay,
 
-    stepBackward:stepBackward,
-    stepForward:stepForward
+    stepBackward: stepBackward,
+    stepForward: stepForward,
 };
 
 export default Icons;

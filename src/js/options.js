@@ -1,4 +1,3 @@
-/* global DPLAYER_VERSION */
 import defaultApiBackend from './api.js';
 
 export default (options) => {
@@ -21,12 +20,12 @@ export default (options) => {
         contextmenu: [],
         mutex: true,
         pluginOptions: { hls: {}, flv: {}, dash: {}, webtorrent: {} },
-        playList:{
-            use:false,
-            current:1,
-            total:0,
-            getVideo:()=>{}
-        }
+        playList: {
+            use: false,
+            current: 1,
+            total: 0,
+            getVideo: () => {},
+        },
     };
     for (const defaultKey in defaultOption) {
         if (defaultOption.hasOwnProperty(defaultKey) && !options.hasOwnProperty(defaultKey)) {
@@ -60,7 +59,7 @@ export default (options) => {
             click: (player) => {
                 player.infoPanel.triggle();
             },
-        }
+        },
     ]);
     if (options.playList) {
         isNaN(parseInt(options.playList.current)) && (options.playList.current = 1);
